@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="A private one-minute wellbeing check-in and trusted mental-health support resources for Easwari Engineering College students.">
+  <title>You Matter | ENLIT</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#check-in">Skip to the check-in</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="You Matter home"><img class="enlit-header-logo" src="enlit-logo.png" alt=""><span><strong>YOU MATTER</strong><small>ENLIT · The Literary Club</small></span></a>
+    <a class="header-help" href="tel:14416"><span aria-hidden="true">●</span> Support now</a>
+  </header>
+
+  <main id="top">
+    <section class="checkin-section" id="check-in">
+      <div class="checkin-intro">
+        <img class="college-lockup" src="eec-logo.png" alt="Easwari Engineering College, Ramapuram Chennai">
+        <p class="issue-label">A private one-minute check-in</p>
+        <h1>How have you been,<br><em>really?</em></h1>
+        <p class="intro-copy">Five simple questions can help you notice your recent mood, calm, energy, rest and interest. There are no right answers.</p>
+        <div class="privacy-note"><span aria-hidden="true">×</span><p><strong>Nothing is submitted.</strong> Your answers and result stay on this screen and disappear when you refresh.</p></div>
+      </div>
+
+      <div class="survey-card" id="survey-card">
+        <div class="survey-meta"><span id="question-count">Question 1 of 5</span><span>Past two weeks</span></div>
+        <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+        <form id="wellbeing-form" novalidate>
+          <fieldset id="question-fieldset">
+            <legend id="question-text"></legend>
+            <p class="question-hint">How often has this felt true for you?</p>
+            <div class="answer-list" id="answer-list"></div>
+          </fieldset>
+          <p class="form-status" id="form-status" role="alert"></p>
+          <div class="survey-actions">
+            <button class="button button-ghost" id="back-button" type="button">Back</button>
+            <button class="button button-red" id="next-button" type="button" disabled>Next question</button>
+          </div>
+        </form>
+
+        <section class="result-panel" id="result-panel" hidden aria-live="polite" tabindex="-1">
+          <p class="result-kicker">Your wellbeing portrait</p>
+          <div class="result-topline">
+            <div class="score-ring" id="score-ring" role="img" aria-label="Wellbeing reflection score"><strong id="score-value">0</strong><span>/100</span></div>
+            <div><h2 id="result-title"></h2><p id="result-copy"></p></div>
+          </div>
+          <div class="portrait-bars" id="portrait-bars"></div>
+          <div class="result-note"><strong>A reflection, not a diagnosis.</strong><p>This result is based only on these five answers. A score cannot decide whether you need help—if something feels wrong, reaching out is enough.</p></div>
+          <div class="result-actions"><a class="button button-red" href="tel:14416">Talk to Tele-MANAS</a><button class="button button-ghost" id="retake-button" type="button">Retake check-in</button></div>
+        </section>
+      </div>
+      <p class="survey-source">The reflection covers broad wellbeing areas also used by the WHO-5. It is not the official WHO-5 questionnaire or a clinical assessment.</p>
+    </section>
+
+    <section class="urgent-strip" aria-labelledby="urgent-title">
+      <div><p class="issue-label">If you may hurt yourself or feel unable to stay safe</p><h2 id="urgent-title">Your score does not matter right now. Get human help.</h2></div>
+      <div class="urgent-steps"><p><span>01</span> Move near a trusted person or into a safer, public place.</p><p><span>02</span> Call <strong>112</strong> for immediate emergency help.</p><p><span>03</span> Call <strong>Tele-MANAS 14416</strong> for free 24×7 mental-health support.</p></div>
+      <div class="urgent-actions"><a class="button button-cream" href="tel:112">Call 112</a><a class="button button-outline" href="tel:14416">Call 14416</a></div>
+    </section>
+
+    <section class="editorial-section reach-out" id="reach-out">
+      <div class="section-number">01 / REACH OUT</div>
+      <div class="section-title"><p class="issue-label">You do not need perfect words</p><h2>Borrow<br>these.</h2></div>
+      <div class="message-cutout"><p id="message-text">“I’m having a difficult time and I don’t want to be alone right now. Can you stay with me or call me?”</p><button class="underlined-button" id="copy-message" type="button">Copy this message</button><p class="copy-status" id="copy-status" role="status" aria-live="polite"></p></div>
+    </section>
+
+    <section class="pause-section" id="ground">
+      <div class="pause-copy"><div class="section-number">02 / PAUSE</div><p class="issue-label">One minute. Nothing to solve.</p><h2>Let the next<br>moment be small.</h2><p>Follow the circle at a comfortable pace. Breathe normally if this pattern feels uncomfortable.</p><button class="button button-cream" id="breath-toggle" type="button">Start 60-second pause</button></div>
+      <div class="breath-stage" aria-live="polite"><div class="breath-orbit" id="breath-orbit"><span id="breath-word">Ready</span><small id="breath-time">1:00</small></div><p id="breath-instruction">Place both feet on the floor if you can.</p></div>
+      <div class="five-senses"><span>5 things you see</span><span>4 things you feel</span><span>3 things you hear</span><span>2 things you smell</span><span>1 thing you taste</span></div>
+    </section>
+
+    <section class="editorial-section friend-section" id="friend">
+      <div class="section-number">03 / HELP A FRIEND</div>
+      <div class="section-title"><p class="issue-label">Take concern seriously</p><h2>Stay<br>close.</h2></div>
+      <div class="friend-steps"><article><span>ASK</span><h3>Be direct and gentle.</h3><p>“Are you thinking about suicide?” Listen without debating, blaming or trying to fix everything at once.</p></article><article><span>STAY</span><h3>Do not leave them alone.</h3><p>If danger may be immediate, move to a safer place and reduce access to anything they could use to hurt themselves.</p></article><article><span>CONNECT</span><h3>Bring in trained help.</h3><p>Call 112 in an emergency or Tele-MANAS at 14416. Involve a trusted adult or health professional.</p></article></div>
+    </section>
+
+    <section class="resources-section" aria-labelledby="support-title">
+      <div class="section-number">04 / TRUSTED SUPPORT</div><h2 id="support-title">Real people.<br><em>Real support.</em></h2>
+      <div class="resource-list"><a href="tel:14416"><span>01</span><strong>Tele-MANAS</strong><small>14416 · free 24×7 support across India</small><b>CALL ↗</b></a><a href="tel:18008914416"><span>02</span><strong>Tele-MANAS alternate</strong><small>1-800-891-4416</small><b>CALL ↗</b></a><a href="tel:112"><span>03</span><strong>Emergency response</strong><small>112 · when there is immediate danger</small><b>CALL ↗</b></a><a href="https://telemanas.mohfw.gov.in/" target="_blank" rel="noreferrer"><span>04</span><strong>National programme</strong><small>Official Government of India resource</small><b>OPEN ↗</b></a></div>
+    </section>
+
+    <section class="event-section" id="event">
+      <div class="event-heading"><div class="section-number">05 / ON CAMPUS</div><p class="issue-label">ENLIT awareness event</p><h2>Ways to connect,<br>express & be kind.</h2><p>Join only the activities that feel comfortable.</p></div>
+      <div class="activity-list"><article><span>WRITE</span><h3>Letters of Kindness</h3></article><article><span>REFLECT</span><h3>Letter to Your Future Self</h3></article><article><span>SHARE</span><h3>Reasons to Stay Wall</h3></article><article><span>ACT</span><h3>Kindness Spin Wheel</h3></article><article><span>RELEASE</span><h3>Pillow Pit Stop</h3></article><article><span>LISTEN</span><h3>Comforting Messages</h3></article><article><span>TALK</span><h3>Rant Table</h3></article><article><span>EXPRESS</span><h3>Private Sharing Booth</h3></article><article><span>PLAY</span><h3>Stack Cups</h3></article></div>
+      <p class="boundary-note"><strong>Please know:</strong> ENLIT volunteers offer peer listening, not counselling or emergency care. If someone may be unsafe, volunteers should involve designated staff or emergency support rather than promise absolute secrecy.</p>
+    </section>
+  </main>
+
+  <footer><div class="footer-brand"><img src="enlit-logo.png" alt="ENLIT"><div><strong>YOU MATTER</strong><span>ENLIT · The Literary Club</span></div></div><img class="footer-college-logo" src="eec-logo.png" alt="Easwari Engineering College"><p>This website offers awareness information, not diagnosis or medical treatment.<br>Sources: <a href="https://www.who.int/publications/m/item/WHO-UCN-MSD-MHE-2024.01" target="_blank" rel="noreferrer">WHO wellbeing resource</a> · <a href="https://dghs.mohfw.gov.in/national-mental-health-programme.php" target="_blank" rel="noreferrer">Government of India</a></p></footer>
+  <script src="app.js"></script>
+</body>
+</html>
